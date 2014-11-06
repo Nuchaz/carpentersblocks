@@ -16,7 +16,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.util.ForgeDirection;
-
 import com.carpentersblocks.CarpentersBlocks;
 import com.carpentersblocks.data.Bed;
 import com.carpentersblocks.tileentity.TEBase;
@@ -269,58 +268,57 @@ public class BlockCarpentersBed extends BlockCoverable {
     {
         return BlockRegistry.carpentersBedRenderID;
     }
-    
-	@Override
-	public ForgeDirection[] getValidRotations(World worldObj, int x, int y,int z) 
-	{
-		ForgeDirection[] axises = {ForgeDirection.UP, ForgeDirection.DOWN};
-		return axises;
-	}
-	
-	@Override
-	public boolean rotateBlock(World world, int x, int y, int z, ForgeDirection axis) 
-	{
-		// to correctly support archimedes' ships mod:
-		// if Axis is DOWN, block rotates to the left, north -> west -> south -> east
-		// if Axis is UP, block rotates to the right:  north -> east -> south -> west
-		
-		TileEntity tile = world.getTileEntity(x, y, z);
-		if (tile != null && tile instanceof TEBase)
-		{
-			TEBase cbTile = (TEBase)tile;
-			ForgeDirection direction = Bed.getDirection(cbTile);
-			switch (axis)
-			{
-				case UP:
-				{
-					switch (direction)
-					{
-						case NORTH:{Bed.setDirection(cbTile, 1); break;}
-						case EAST:{Bed.setDirection(cbTile, 2); break;}
-						case SOUTH:{Bed.setDirection(cbTile, 3); break;}
-						case WEST:{Bed.setDirection(cbTile, 0); break;}
-						default: break;
-					}
-					break;
-				}
-				case DOWN:
-				{
-					switch (direction)
-					{
-						case NORTH:{Bed.setDirection(cbTile, 3); break;}
-						case EAST:{Bed.setDirection(cbTile, 0); break;}
-						case SOUTH:{Bed.setDirection(cbTile, 1); break;}
-						case WEST:{Bed.setDirection(cbTile, 2); break;}
-						default: break;
-					}
-					break;
-				}
-				default: return false;
-			}
-			return true;
-		}
-		return false;
-	}
 
+    @Override
+    public ForgeDirection[] getValidRotations(World worldObj, int x, int y,int z)
+    {
+        ForgeDirection[] axises = {ForgeDirection.UP, ForgeDirection.DOWN};
+        return axises;
+    }
+
+    @Override
+    public boolean rotateBlock(World world, int x, int y, int z, ForgeDirection axis)
+    {
+        // to correctly support archimedes' ships mod:
+        // if Axis is DOWN, block rotates to the left, north -> west -> south -> east
+        // if Axis is UP, block rotates to the right:  north -> east -> south -> west
+
+        TileEntity tile = world.getTileEntity(x, y, z);
+        if (tile != null && tile instanceof TEBase)
+        {
+            TEBase cbTile = (TEBase)tile;
+            ForgeDirection direction = Bed.getDirection(cbTile);
+            switch (axis)
+            {
+                case UP:
+                {
+                    switch (direction)
+                    {
+                        case NORTH:{Bed.setDirection(cbTile, 1); break;}
+                        case EAST:{Bed.setDirection(cbTile, 2); break;}
+                        case SOUTH:{Bed.setDirection(cbTile, 3); break;}
+                        case WEST:{Bed.setDirection(cbTile, 0); break;}
+                        default: break;
+                    }
+                    break;
+                }
+                case DOWN:
+                {
+                    switch (direction)
+                    {
+                        case NORTH:{Bed.setDirection(cbTile, 3); break;}
+                        case EAST:{Bed.setDirection(cbTile, 0); break;}
+                        case SOUTH:{Bed.setDirection(cbTile, 1); break;}
+                        case WEST:{Bed.setDirection(cbTile, 2); break;}
+                        default: break;
+                    }
+                    break;
+                }
+                default: return false;
+            }
+            return true;
+        }
+        return false;
+    }
 
 }
