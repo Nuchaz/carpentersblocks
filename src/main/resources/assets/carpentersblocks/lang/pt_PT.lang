@@ -1,0 +1,60 @@
+# Carpenter's Blocks Language File = Portugal Portuguese
+
+# CREATIVE TAB
+itemGroup.carpentersBlocks.name=Carpenter's Blocks
+
+# ITEMS
+item.itemCarpentersHammer.name=Martelo de Carpinteiro
+item.itemCarpentersChisel.name=Cinzel de Carpinteiro
+item.itemCarpentersDoor.name=Porta de Carpinteiro
+item.itemCarpentersBed.name=Cama de Carpinteiro
+item.itemCarpentersTile.name=Azulejo de Carpinteiro
+
+# BLOCKS
+tile.blockCarpentersBarrier.name=Barreira de Carpinteiro
+tile.blockCarpentersBed.name=Cama de Carpinteiro
+tile.blockCarpentersBlock.name=Bloco de Carpinteiro
+tile.blockCarpentersButton.name=Botão de Carpinteiro
+tile.blockCarpentersDaylightSensor.name=Sensor de Luz do Dia de Carpinteiro
+tile.blockCarpentersCollapsibleBlock.name=Bloco Flexível de Carpinteiro
+tile.blockCarpentersDoor.name=Porta de Carpinteiro
+tile.blockCarpentersGarageDoor.name=Portão de Garagem de Carpinteiro
+tile.blockCarpentersGate.name=Portão de Carpinteiro
+tile.blockCarpentersHatch.name=Alçapão de Carpinteiro
+tile.blockCarpentersLadder.name=Escadas de Mão de Carpinteiro
+tile.blockCarpentersLever.name=Alavanca de Carpinteiro
+tile.blockCarpentersPressurePlate.name=Placa de Pressão de Carpinteiro
+tile.blockCarpentersSlope.wedge.name=Declive de Carpinteiro
+tile.blockCarpentersSlope.obliqueInterior.name=Declive Interior Obliquo de Carpinteiro
+tile.blockCarpentersSlope.obliqueExterior.name=Declive Exterior Obliquo de Carpinteiro
+tile.blockCarpentersSlope.prism.name=Declive em Prima de Carpinteiro
+tile.blockCarpentersSlope.prismWedge.name=Declive com prima de Carpinteiro
+tile.blockCarpentersStairs.name=Escadas de Carpinteiro
+tile.blockCarpentersTorch.name=Tocha de Carpinteiro
+tile.blockCarpentersSafe.name=Cofre de Carpinteiro
+tile.blockCarpentersFlowerPot.name=Vaso de Flores de Carpinteiro
+
+# ENTITIES
+entity.CarpentersTile.name=Azulejo de Carpinteiro
+
+# MESSAGES
+message.polarity_pos.name=POLARIDADE: Saída de redstone normal.
+message.polarity_neg.name=POLARIDADE: Saída de redstone invertida.
+message.activation_iron.name=ATIVAÇÃO: Portar-se-á como uma porta de ferro.
+message.activation_wood.name=ATIVAÇÃO: Portar-se-á como uma porta de Madeira.
+message.trigger_player.name=GATILHO: Apenas ativado por jogadores.
+message.trigger_monster.name=GATILHO: Apenas ativado por monstros.
+message.trigger_animal.name=GATILHO: Apenas ativado por animais.
+message.trigger_all.name=GATILHO: Ativado por todas as entidades.
+message.safe_lock.name=CONTROLO: Cofre trancado.
+message.safe_unlock.name=CONTROLO: Cofre destrancado.
+message.automation_all.name=AUTOMATIZAÇÃO: Os itens podem ser inseridos e extraídos.
+message.automation_disabled.name=AUTOMATIZAÇÃO: Desativado.
+message.automation_insert.name=AUTOMATIZAÇÃO: Os itens só podem ser inseridos.
+message.automation_extract.name=AUTOMATIZAÇÃO: Os itens só podem ser extraídos.
+message.block_lock.name=CONTROLO: Este bloco está trancado.
+message.sensitivity_sleep.name=SENSIBILIDADE: O estado é alterado no limiar do sono do jogador (nascer-do-sol e pôr-do-sol).
+message.sensitivity_monsters.name=SENSIBILIDADE: O estado é alterado no limiar da luz da evocação dos monstros (tempestades inclusive).
+message.sensitivity_dynamic.name=SENSIBILIDADE: A saída de redstone altera conforme a posição do sol.
+
+# </file>
